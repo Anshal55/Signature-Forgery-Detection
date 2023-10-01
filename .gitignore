@@ -1,6 +1,4 @@
-*.png
-*.jpg
-*.jpeg
-*.tif
-*.h5
+data/archive/*
+test/*
 solutions/__pycache__/*
+*.h5
