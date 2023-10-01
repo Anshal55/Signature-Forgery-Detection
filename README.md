@@ -120,3 +120,6 @@ The results and a demo video is attached below:<br>
 
 - Articles<br>
 [Medium article](https://medium.com/swlh/signet-detecting-signature-similarity-using-machine-learning-deep-learning-is-this-the-end-of-1a6bdc76b04b)<br>
+
+- Dataset<br>
+[handwritten-signature-datasets](https://www.kaggle.com/datasets/ishanikathuria/handwritten-signature-datasets)
