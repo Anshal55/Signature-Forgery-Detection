@@ -6,6 +6,18 @@ processes.
 
 <br></br>
 
+# Table of Contents
+- [Signature-Forgery-Detection](#signature-forgery-detection)
+- [Table of Contents](#table-of-contents)
+- [1. Model](#1-model)
+- [2. Dataset](#2-dataset)
+- [3. Approach](#3-approach)
+    - [1. Cross paired model](#1-cross-paired-model)
+    - [2. Similar pair model](#2-similar-pair-model)
+- [4. Results](#4-results)
+- [5. Scope for improvement](#5-scope-for-improvement)
+- [6. References](#6-references)
+
 # 1. Model
 - The model used for the implementation of this feature is `SigNet: Convolutional Siamese Network for Writer Independent Offline Signature
 Verification`.
