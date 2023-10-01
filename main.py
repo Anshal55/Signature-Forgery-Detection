@@ -1,16 +1,44 @@
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from solutions import helper
+from solutions import helper  # Replace with your helper module
 
 
-def load_image(label):
+def load_image(label: tk.Label) -> Image:
+    """
+    Open a file dialog to load an image and display its filename.
+
+    Args:
+        label (tk.Label): The label to display the selected filename.
+
+    Returns:
+        Image: The loaded image.
+    """
     filename = filedialog.askopenfilename()
     label.config(text=filename)
     return Image.open(filename)
 
 
-def predict(image1_label, image2_label, panel1, panel2, result_label):
+def predict(
+    image1_label: tk.Label,
+    image2_label: tk.Label,
+    panel1: tk.Label,
+    panel2: tk.Label,
+    result_label: tk.Label,
+) -> None:
+    """
+    Load and preprocess two images, display them, and make a prediction.
+
+    Args:
+        image1_label (tk.Label): Label displaying the filename of the first image.
+        image2_label (tk.Label): Label displaying the filename of the second image.
+        panel1 (tk.Label): Label to display the first image.
+        panel2 (tk.Label): Label to display the second image.
+        result_label (tk.Label): Label to display the prediction result.
+
+    Returns:
+        None
+    """
     image1, show_im1 = helper.load_and_preprocess_image(image1_label.cget("text"))
     image2, show_im2 = helper.load_and_preprocess_image(image2_label.cget("text"))
 
@@ -22,6 +50,7 @@ def predict(image1_label, image2_label, panel1, panel2, result_label):
     panel1.image = img1
     panel2.config(image=img2)
     panel2.image = img2
+
     # Replace this with your prediction logic
     result = helper.predict_function(image1, image2)
     result_label.config(text="Prediction: " + result)
